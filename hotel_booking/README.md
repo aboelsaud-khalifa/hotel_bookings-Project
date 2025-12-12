@@ -1,4 +1,4 @@
-# hotel_bookings-Project-ManusAI (Version 2)
+# hotel_bookings-Project
 
 ## Smart Decisions with Hotel Booking Analytics
 
