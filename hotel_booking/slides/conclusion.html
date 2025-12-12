@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+      * { margin: 0; padding: 0; }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        box-sizing: border-box;
+        background: #E8E8E8; /* Background */
+        font-family: 'Inter', sans-serif;
+        color: #333333;
+        padding: 60px;
+        display: flex;
+        flex-direction: column;
+      }
+      .main-title {
+        font-size: 32px;
+        font-weight: 800;
+        color: #1A1A1A; /* Title */
+        margin-bottom: 40px;
+        border-bottom: 4px solid #FF4500; /* Accent 1 for separation */
+        padding-bottom: 10px;
+      }
+      .content-grid {
+        display: flex;
+        flex-grow: 1;
+        gap: 40px;
+      }
+      .column {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+      }
+      .section-title {
+        font-size: 20px;
+        font-weight: 700;
+        color: #0057B7; /* Accent 2 */
+        margin-bottom: 20px;
+        text-transform: uppercase;
+      }
+      .list-item {
+        font-size: 16px;
+        line-height: 1.8;
+        margin-bottom: 15px;
+        padding-left: 20px;
+        position: relative;
+      }
+      .list-item::before {
+        content: "•";
+        color: #FF4500; /* Accent 1 */
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+      }
+      .item-title {
+        font-weight: 700;
+        color: #1A1A1A;
+      }
+      .item-description {
+        font-size: 14px;
+        color: #333333;
+        margin-top: 5px;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="main-title">
+            Conclusion and Next Steps
+        </div>
+        <div class="content-grid">
+            <div class="column">
+                <div class="section-title">Summary</div>
+                <ul style="list-style: none; padding: 0;">
+                    <li class="list-item">
+                        <div class="item-title">Successful Data Transformation</div>
+                        <div class="item-description">Converted raw, complex data into a clean, reliable dataset with 119,210 valid records.</div>
+                    </li>
+                    <li class="list-item">
+                        <div class="item-title">Clear Actionable Intelligence</div>
+                        <div class="item-description">Identified key patterns in cancellation rates, seasonal trends, and customer origins.</div>
+                    </li>
+                    <li class="list-item">
+                        <div class="item-title">Foundation for Decision-Making</div>
+                        <div class="item-description">Provided a robust foundation for continuous monitoring and strategic planning.</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="column">
+                <div class="section-title">Next Steps</div>
+                <ul style="list-style: none; padding: 0;">
+                    <li class="list-item">
+                        <div class="item-title">Excel Dashboard</div>
+                        <div class="item-description">Build a fully interactive dashboard with PivotTables and Slicers for real-time decision-making.</div>
+                    </li>
+                    <li class="list-item">
+                        <div class="item-title">Predictive Modeling</div>
+                        <div class="item-description">Develop a machine learning model to predict high-risk cancellations and enable proactive interventions.</div>
+                    </li>
+                    <li class="list-item">
+                        <div class="item-title">Deep-Dive Analysis</div>
+                        <div class="item-description">Analyze `lead_time` and `market_segment` to refine cancellation prediction and optimize marketing spend.</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

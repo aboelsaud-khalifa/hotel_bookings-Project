@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+      * { margin: 0; padding: 0; }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        box-sizing: border-box;
+        background: #E8E8E8; /* Background */
+        font-family: 'Inter', sans-serif;
+        color: #333333;
+        padding: 60px;
+        display: flex;
+        flex-direction: column;
+      }
+      .main-title {
+        font-size: 32px;
+        font-weight: 800;
+        color: #1A1A1A; /* Title */
+        margin-bottom: 40px;
+        border-bottom: 4px solid #FF4500; /* Accent 1 for separation */
+        padding-bottom: 10px;
+      }
+      .recommendations-grid {
+        display: flex;
+        gap: 20px;
+        flex-grow: 1;
+      }
+      .recommendation-card {
+        flex: 1;
+        background-color: #FFFFFF;
+        border: 2px solid #333333;
+        display: flex;
+        flex-direction: column;
+      }
+      .card-header {
+        padding: 20px;
+        font-size: 18px;
+        font-weight: 700;
+        color: #FFFFFF;
+        text-transform: uppercase;
+        text-align: center;
+      }
+      .card-header.accent1 {
+        background-color: #FF4500; /* Accent 1 */
+      }
+      .card-header.accent2 {
+        background-color: #0057B7; /* Accent 2 */
+      }
+      .card-content {
+        padding: 20px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .section-label {
+        font-size: 14px;
+        font-weight: 700;
+        color: #FF4500; /* Accent 1 */
+        text-transform: uppercase;
+        margin-bottom: 8px;
+        margin-top: 15px;
+      }
+      .section-label:first-child {
+        margin-top: 0;
+      }
+      .section-text {
+        font-size: 15px;
+        line-height: 1.5;
+        color: #333333;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="main-title">
+            Recommendations: Actionable Insights
+        </div>
+        <div class="recommendations-grid">
+            <div class="recommendation-card">
+                <div class="card-header accent1">
+                    1. Mitigate City Hotel Cancellation Risk
+                </div>
+                <div class="card-content">
+                    <div class="section-label">Action</div>
+                    <div class="section-text">
+                        Implement a stricter, non-refundable deposit policy for City Hotel bookings, especially during peak seasons.
+                    </div>
+                    <div class="section-label">Expected Outcome</div>
+                    <div class="section-text">
+                        Reduce the City Hotel's 41.73% cancellation rate, directly boosting revenue.
+                    </div>
+                </div>
+            </div>
+            <div class="recommendation-card">
+                <div class="card-header accent2">
+                    2. Optimize Pricing and Inventory
+                </div>
+                <div class="card-content">
+                    <div class="section-label">Action</div>
+                    <div class="section-text">
+                        Use the identified seasonal trends to implement dynamic pricing models that maximize revenue during peak months (July/August) and offer incentives during low seasons.
+                    </div>
+                    <div class="section-label">Expected Outcome</div>
+                    <div class="section-text">
+                        Increase overall ADR and occupancy rate throughout the year.
+                    </div>
+                </div>
+            </div>
+            <div class="recommendation-card">
+                <div class="card-header accent1">
+                    3. Target Key Markets
+                </div>
+                <div class="card-content">
+                    <div class="section-label">Action</div>
+                    <div class="section-text">
+                        Focus marketing and loyalty programs on the top 5 origin countries to strengthen the most valuable customer base.
+                    </div>
+                    <div class="section-label">Expected Outcome</div>
+                    <div class="section-text">
+                        Increase repeat guest rate and reduce reliance on third-party agents.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

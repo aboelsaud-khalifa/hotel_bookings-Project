@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+      * { margin: 0; padding: 0; }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        box-sizing: border-box;
+        background: #E8E8E8; /* Background */
+        font-family: 'Inter', sans-serif;
+        color: #333333;
+        padding: 60px;
+        display: flex;
+        flex-direction: column;
+      }
+      .main-title {
+        font-size: 32px;
+        font-weight: 800;
+        color: #1A1A1A; /* Title */
+        margin-bottom: 20px;
+        border-bottom: 4px solid #FF4500; /* Accent 1 for separation */
+        padding-bottom: 10px;
+      }
+      .subtitle {
+        font-size: 20px;
+        font-weight: 600;
+        color: #1A1A1A;
+        margin-bottom: 15px;
+      }
+      .body-text {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 30px;
+      }
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 30px;
+      }
+      .data-table th, .data-table td {
+        border: 2px solid #333333;
+        padding: 12px 15px;
+        text-align: left;
+        font-size: 16px;
+      }
+      .data-table th {
+        background-color: #1A1A1A;
+        color: #E8E8E8;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      .data-table tr:nth-child(even) {
+        background-color: #D0D0D0;
+      }
+      .summary-box {
+        background-color: #0057B7; /* Accent 2 */
+        color: #E8E8E8;
+        padding: 20px;
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="main-title">
+            Solution Process: Data Cleaning and Preparation
+        </div>
+        <div class="subtitle">
+            The "How": From Raw CSV to Clean Data
+        </div>
+        <div class="body-text">
+            Our solution focused on a robust, multi-step data pipeline using **Pandas** for maximum efficiency and reproducibility.
+        </div>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Step</th>
+                    <th>Action Taken</th>
+                    <th>Rationale</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1. Load & Structure</td>
+                    <td>Loaded data with 32 externally-sourced column names.</td>
+                    <td>Correctly map raw data to meaningful features.</td>
+                </tr>
+                <tr>
+                    <td>2. Data Cleaning</td>
+                    <td>Removed spurious header row and invalid zero-guest bookings.</td>
+                    <td>Ensure data integrity and focus on valid transactions.</td>
+                </tr>
+                <tr>
+                    <td>3. Missing Values</td>
+                    <td>Imputed `country` (Unknown), `agent`/`company` (0), and `adr` (Median).</td>
+                    <td>Preserve records while ensuring all fields are usable for analysis.</td>
+                </tr>
+                <tr>
+                    <td>4. Feature Engineering</td>
+                    <td>Created a single `arrival_date` column.</td>
+                    <td>Facilitate time-series analysis and trend identification.</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="summary-box">
+            Result: A clean, structured dataset (`hotel_bookings_Cleaned.csv`) with **119,210 valid records**, ready for deep analysis and dashboard creation.
+        </div>
+    </div>
+</body>
+</html>

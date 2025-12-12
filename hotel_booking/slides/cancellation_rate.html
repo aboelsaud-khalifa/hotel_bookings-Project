@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+      * { margin: 0; padding: 0; }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        box-sizing: border-box;
+        background: #E8E8E8; /* Background */
+        font-family: 'Inter', sans-serif;
+        color: #333333;
+        padding: 60px;
+        display: flex;
+        flex-direction: column;
+      }
+      .main-title {
+        font-size: 32px;
+        font-weight: 800;
+        color: #1A1A1A; /* Title */
+        margin-bottom: 30px;
+        border-bottom: 4px solid #FF4500; /* Accent 1 for separation */
+        padding-bottom: 10px;
+      }
+      .content-grid {
+        display: flex;
+        gap: 40px;
+        flex-grow: 1;
+      }
+      .column-left {
+        width: 55%;
+        display: flex;
+        flex-direction: column;
+      }
+      .column-right {
+        width: 45%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .insight-title {
+        font-size: 20px;
+        font-weight: 700;
+        color: #FF4500; /* Accent 1 */
+        margin-bottom: 15px;
+        text-transform: uppercase;
+      }
+      .insight-text {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 25px;
+      }
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+      .data-table th, .data-table td {
+        border: 2px solid #333333;
+        padding: 10px 12px;
+        text-align: left;
+        font-size: 15px;
+      }
+      .data-table th {
+        background-color: #1A1A1A;
+        color: #E8E8E8;
+        font-weight: 700;
+      }
+      .data-table tr:nth-child(even) {
+        background-color: #D0D0D0;
+      }
+      .evidence-title {
+        font-size: 16px;
+        font-weight: 700;
+        color: #1A1A1A;
+        margin-bottom: 10px;
+      }
+      .evidence-text {
+        font-size: 15px;
+        line-height: 1.5;
+        color: #333333;
+      }
+      .chart-image {
+        width: 100%;
+        max-width: 350px;
+        height: 280px;
+        object-fit: contain;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="main-title">
+            Key Finding 1: Cancellation Rate Analysis
+        </div>
+        <div class="content-grid">
+            <div class="column-left">
+                <div class="insight-title">Insight: City Hotels Face a Higher Cancellation Risk</div>
+                <div class="insight-text">
+                    The overall cancellation rate is **37.08%**, but this risk is not evenly distributed between the two hotel types.
+                </div>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Hotel Type</th>
+                            <th>Total Bookings</th>
+                            <th>Cancellation Rate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>City Hotel</strong></td>
+                            <td>79,163</td>
+                            <td><strong style="color: #FF4500;">41.73%</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Resort Hotel</strong></td>
+                            <td>40,047</td>
+                            <td><strong style="color: #0057B7;">27.76%</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="evidence-title">Visual Evidence</div>
+                <div class="evidence-text">
+                    The City Hotel has a significantly higher cancellation rate, suggesting a need for targeted strategies to improve retention and minimize revenue loss.
+                </div>
+            </div>
+            <div class="column-right">
+                <img src="/home/ubuntu/eda_visualizations/cancellation_rate_by_hotel.png" alt="Cancellation Rate by Hotel Type" class="chart-image">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

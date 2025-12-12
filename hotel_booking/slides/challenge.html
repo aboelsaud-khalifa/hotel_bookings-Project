@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+      * { margin: 0; padding: 0; }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        box-sizing: border-box;
+        background: #E8E8E8; /* Background */
+        font-family: 'Inter', sans-serif;
+        color: #333333;
+        padding: 60px;
+        display: flex;
+        flex-direction: column;
+      }
+      .main-title {
+        font-size: 32px;
+        font-weight: 800;
+        color: #1A1A1A; /* Title */
+        margin-bottom: 40px;
+        border-bottom: 4px solid #FF4500; /* Accent 1 for separation */
+        padding-bottom: 10px;
+      }
+      .content-grid {
+        display: flex;
+        flex-grow: 1;
+        gap: 40px;
+      }
+      .column-left {
+        width: 60%;
+      }
+      .column-right {
+        width: 40%;
+        border-left: 2px solid #333333;
+        padding-left: 40px;
+      }
+      .section-title {
+        font-size: 20px;
+        font-weight: 700;
+        color: #FF4500; /* Accent 1 */
+        margin-bottom: 15px;
+        text-transform: uppercase;
+      }
+      .body-text {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+      .list-item {
+        font-size: 16px;
+        line-height: 1.8;
+        margin-bottom: 10px;
+        padding-left: 20px;
+        position: relative;
+      }
+      .list-item::before {
+        content: "•";
+        color: #0057B7; /* Accent 2 */
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="main-title">
+            The Challenge: Transforming Raw Data into Intelligence
+        </div>
+        <div class="content-grid">
+            <div class="column-left">
+                <div class="section-title">Problem Statement</div>
+                <div class="body-text">
+                    The raw hotel booking dataset, containing over 119,000 reservations, was unstructured, incomplete, and contained quality issues. The core challenge was to:
+                </div>
+                <ul style="list-style: none; padding: 0;">
+                    <li class="list-item">Perform **extensive data cleaning** to ensure reliability.</li>
+                    <li class="list-item">Conduct **Exploratory Data Analysis (EDA)** to identify key trends.</li>
+                    <li class="list-item">Translate complex data patterns into **clear, actionable business recommendations**.</li>
+                </ul>
+            </div>
+            <div class="column-right">
+                <div class="section-title">Data Issues Identified</div>
+                <ul style="list-style: none; padding: 0;">
+                    <li class="list-item">Missing header row, requiring external research for column names.</li>
+                    <li class="list-item">Significant missing values in key columns (`country`, `agent`, `company`).</li>
+                    <li class="list-item">Invalid records (e.g., bookings with zero guests).</li>
+                    <li class="list-item">Inconsistent data types requiring careful conversion.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
